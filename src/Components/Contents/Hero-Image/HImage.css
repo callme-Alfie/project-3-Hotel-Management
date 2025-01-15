@@ -1,0 +1,107 @@
+/* Updated for responsiveness */
+.image3 {
+    width: 100%;
+    height: 100vh;
+    background-color: aqua;
+    position: absolute;
+    top: 0;
+    z-index: -10;
+}
+
+.home-img {
+    filter: brightness(0.8);
+}
+
+.background-video {
+    filter: brightness(0.8);
+}
+
+/* Home video container */
+.home-video {
+    width: 100%;
+    height: 100vh; /* Ensures the video stretches to full screen height */
+    z-index: -10;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+}
+
+/* For smaller screens, adjust sizes for the image containers */
+@media (max-width: 768px) {
+    /* Ensure the images adjust and scale on smaller screens */
+    .image1,
+    .image2,
+    .image3 {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 20px; /* Add spacing between images */
+        border-radius: 15px;
+    }
+    .background-video {
+        filter: brightness(0.8);
+        width: 100vw; /* Full width */
+        height: 100vh;
+        object-fit: cover; /* Ensures the video covers the entire screen, cropping if necessary */
+    object-position: center;
+        
+    }
+    
+
+    /* Ensure the video stretches to cover the full screen */
+    .home-video {
+        width: 100vw; /* Full width */
+        height: 100vh; /* Full height */
+        top: 0; /* Align to the top of the screen */
+    }
+}
+
+/* Larger screens (tablets and above) */
+@media (min-width: 769px) {
+    /* Adjust image positioning for larger screens */
+    .image1 {
+        width: 550px;
+        height: 400px;
+        background-color: aquamarine;
+        position: absolute;
+        top: 130px;
+        left: 650px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .image2 {
+        width: 350px;
+        height: 250px;
+        background-color: rgb(206, 194, 36);
+        position: absolute;
+        top: 330px;
+        left: 550px;
+        border-radius: 20px;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    .image3 {
+        width: 250px;
+        height: 150px;
+        background-color: rgb(206, 98, 36);
+        position: absolute;
+        top: 425px;
+        left: 1000px;
+        border-radius: 20px;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    /* Adjust video to cover the whole screen width */
+    .home-video {
+        height: 150vh;
+        z-index: -10;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+    }
+}
